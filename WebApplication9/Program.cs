@@ -7,7 +7,9 @@ var connectionString = builder.Configuration.GetConnectionString("Authentication
 builder.Services.AddDbContext<appconnContext>(options =>
     options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 28))));
 
-builder.Services.AddDefaultIdentity<appiUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<appiUser>(
+    options => options.SignIn.RequireConfirmedAccount = true
+    )
     .AddEntityFrameworkStores<appconnContext>();
 
 // Add services to the container.

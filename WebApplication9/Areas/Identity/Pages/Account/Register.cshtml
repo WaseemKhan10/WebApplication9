@@ -6,11 +6,11 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6" style="-webkit-box-shadow: 2px 3px 5px 0px rgba(219,219,219,1);
--moz-box-shadow: 2px 3px 5px 0px rgba(219,219,219,1);
-box-shadow: 2px 3px 5px 0px rgba(219,219,219,1);padding:15px;border-radius:15px">
+<div class="row justify-content-center" style="text-align:center">
+    <div class="col-sm-6" style="border:1px solid #e6e6e6;padding:10px;padding-left:20px;padding-bottom:20px;border-radius:10px">
+          <div style="font-size:70px;color:#a11a10">
+                <i class="fas fa-users"  style="border:1px solid #a11a10;padding:2px;border-radius:50px"></i>
+            </div>
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <h4>Create a new account.</h4>
             <hr />
@@ -30,10 +30,9 @@ box-shadow: 2px 3px 5px 0px rgba(219,219,219,1);padding:15px;border-radius:15px"
                 <label asp-for="Input.ConfirmPassword"></label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div><br />
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+            <button id="registerSubmit" style="background-color:#a11a10;border:none" type="submit" class="w-100 btn  btn-primary">Register</button>
         </form>
     </div>
-    <div class="col-sm-3"></div>
 </div>
 <div class="col-md-6 col-md-offset-2">
     <section>
